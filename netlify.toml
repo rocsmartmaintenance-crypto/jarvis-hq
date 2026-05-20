@@ -1,0 +1,13 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[functions."brief"]
+  timeout = 26
+
+[[redirects]]
+  from = "/api/brief"
+  to = "/.netlify/functions/brief"
+  status = 200
